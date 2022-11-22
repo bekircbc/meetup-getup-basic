@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect } from "react";
+import React, { createContext, useState, useEffect } from "react";
 import axios from "axios";
 
 export const AppContext = createContext();
@@ -11,6 +11,7 @@ export const AppProvider = ({ children }) => {
   useEffect(() => {
     (async () => {
       const response = (await axios.get(`${BASE_API_URL}/meetups`)).data;
+      console.log(response);
       setLoadedMeetups(response.meetups);
       setIsLoading(false);
     })();
