@@ -1,0 +1,283 @@
+body {
+  background-image: url("images/icon1.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-position-y: top;
+  background-position-x: center;
+  background-color: #ffffff;
+
+  img {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .App {
+    .header {
+      width: 100vw;
+      height: 5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #073761;
+      padding: 0 1rem 0 1rem;
+
+      .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        font-size: 1rem;
+        color: white;
+        font-weight: bold;
+        margin: 0.7rem;
+        img {
+          width: 4rem;
+          height: 4rem;
+        }
+      }
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 5rem;
+        span {
+          margin: 1rem;
+          a {
+            text-decoration: none;
+            font-size: 1rem;
+            color: #fcb8d2;
+          }
+          :hover {
+            color: white;
+          }
+        }
+      }
+    }
+    .allMeetupsPage {
+      text-align: center;
+
+      .allMeetups {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        li {
+          text-decoration: none;
+          list-style: none;
+          margin-bottom: 1rem;
+          width: 20rem;
+        }
+        img {
+          width: 18rem;
+          height: 18rem;
+          border-radius: 0.7rem;
+        }
+      }
+    }
+    .newMeetupPage {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      align-items: center;
+
+      .formCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+        padding: 1rem;
+        width: 30rem;
+        background-color: #c5d1e3;
+        border-radius: 0.7rem;
+        label,
+        textarea,
+        input {
+          width: 27rem;
+          margin: 0.2rem;
+        }
+        textarea {
+          border-radius: 0.7rem;
+          border: 1px solid rgb(170, 154, 118);
+        }
+        input {
+          height: 1.5rem;
+          border-radius: 0.7rem;
+          border: 1px solid rgb(170, 154, 118);
+        }
+        .btnAddMeetup {
+          background-color: #77002e;
+          color: white;
+          width: 10rem;
+          height: 2rem;
+          border-radius: 0.7rem;
+          margin-top: 1rem;
+          font-size: 0.9rem;
+          font-weight: bold;
+          :hover {
+            background-color: white;
+            color: black;
+          }
+        }
+      }
+    }
+    .pageFavorites {
+      text-align: center;
+
+      .favoriteMeetups {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        li {
+          text-decoration: none;
+          list-style: none;
+          margin-bottom: 1rem;
+          width: 20rem;
+        }
+        img {
+          width: 18rem;
+          height: 18rem;
+          border-radius: 0.7rem;
+        }
+      }
+    }
+  }
+  .footer {
+    padding: 10px 20px;
+    border-top: 1px solid #dfdfdf;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    column-gap: 1rem;
+    color: #bfbdbd;
+    a {
+      text-decoration: none;
+      color: #bfbdbd;
+      &:hover {
+        color: black;
+      }
+    }
+    .brand-and-adress {
+      flex-wrap: 1;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1rem;
+      .logoImage {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+    .site-map {
+      flex-wrap: 3;
+      display: flex;
+      justify-content: space-around;
+      column-gap: 20px;
+      .site-map-list {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+  .login-page {
+    h1 {
+      text-align: center;
+    }
+    .login-form {
+      margin: 10px auto;
+      width: fit-content;
+    }
+    p {
+      margin-top: 10px;
+    }
+
+    .formik-error {
+      color: red;
+      font-style: italic;
+      font-size: smaller;
+    }
+  }
+  .register-page {
+    .register-form {
+      h1 {
+        margin-bottom: 10px;
+      }
+      margin: 10px auto;
+      width: fit-content;
+      p {
+        margin-top: 10px;
+      }
+
+      .formik-error {
+        color: red;
+        font-style: italic;
+        font-size: smaller;
+      }
+    }
+  }
+
+  .rating span {
+    color: #edba1a;
+  }
+
+  .searchPage {
+    h3 {
+      color: #0049bf;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+
+      &:hover {
+        font-weight: bold;
+        color: #e78b42;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    img {
+      width: 10rem;
+      height: 10rem;
+    }
+    .App {
+      .header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 6rem;
+        padding: 0;
+        .logo {
+          margin: 0;
+          img {
+            width: 3.5rem;
+            height: 3.5rem;
+          }
+        }
+        nav {
+          margin: 0;
+          gap: 1.5rem;
+          span {
+            margin: 0;
+          }
+        }
+      }
+      .newMeetupPage {
+        .formCard {
+          width: 20rem;
+          label,
+          textarea,
+          input {
+            width: 18rem;
+            margin: 0.2rem;
+          }
+        }
+      }
+    }
+  }
+}
