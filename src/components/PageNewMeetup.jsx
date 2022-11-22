@@ -1,4 +1,5 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
+import axios from "axios";
 // import { AppContext } from "../AppContext";
 
 // const { BASE_API_URL } = useContext(AppContext);
@@ -27,11 +28,14 @@ export function PageNewMeetup() {
       category: enteredCategory,
     };
 
-    fetch(`${BASE_API_URL}meetups`, {
-      method: "POST",
-      body: JSON.stringify(meetupData),
-      headers: { "Content-Type": "application/json" },
-    });
+    (async () => {
+      await axios.post(`${BASE_API_URL}/meetups`, meetupData);
+    })();
+    // fetch(`${BASE_API_URL}/meetups`, {
+    //   method: "POST",
+    //   body: JSON.stringify(meetupData),
+    //   headers: { "Content-Type": "application/json" },
+    // });
   }
   return (
     <section className="newMeetupPage">
