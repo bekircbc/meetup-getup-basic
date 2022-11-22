@@ -12,10 +12,9 @@ export const AppProvider = ({ children }) => {
     (async () => {
       const response = (await axios.get(`${BASE_API_URL}/meetups`)).data;
       setLoadedMeetups(response.meetups);
-      console.log(loadedMeetups);
       setIsLoading(false);
     })();
-  }, [loadedMeetups]);
+  }, []);
 
   function toggleFavoriteStatusHandler(meetup) {
     const meetupData = {
@@ -32,7 +31,7 @@ export const AppProvider = ({ children }) => {
   return (
     <AppContext.Provider
       value={{
-        BASE_API_URL,
+        // BASE_API_URL,
         isLoading,
         loadedMeetups,
         toggleFavoriteStatusHandler,

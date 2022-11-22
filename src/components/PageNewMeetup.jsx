@@ -1,9 +1,9 @@
-import { useRef, useContext } from "react";
-import { AppContext } from "../AppContext";
+import { useRef } from "react";
+// import { AppContext } from "../AppContext";
 
-const { BASE_API_URL } = useContext(AppContext);
+// const { BASE_API_URL } = useContext(AppContext);
 
-console.log(BASE_API_URL);
+const BASE_API_URL = import.meta.env.VITE_BASE_API_URL;
 
 export function PageNewMeetup() {
   const titleInputRef = useRef();
